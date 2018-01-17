@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lottery.Core", "Lottery.Core\Lottery.Core.csproj", "{F4B92B15-91FE-431B-86D1-D3686175A981}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lottery.Services", "Lottery.Services\Lottery.Services.csproj", "{4A3C988D-DE23-4026-8BF9-B4996C35119C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lottery.Simulator", "Lottery.Simulator\Lottery.Simulator.csproj", "{07C2CE6B-D23F-40C6-BD09-E80A537BFF38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lottery.Numbers", "Lottery.Numbers\Lottery.Numbers.csproj", "{4E49354F-B6E7-44E3-9844-A328B738C225}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4B92B15-91FE-431B-86D1-D3686175A981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B92B15-91FE-431B-86D1-D3686175A981}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4B92B15-91FE-431B-86D1-D3686175A981}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4B92B15-91FE-431B-86D1-D3686175A981}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A3C988D-DE23-4026-8BF9-B4996C35119C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A3C988D-DE23-4026-8BF9-B4996C35119C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A3C988D-DE23-4026-8BF9-B4996C35119C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A3C988D-DE23-4026-8BF9-B4996C35119C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07C2CE6B-D23F-40C6-BD09-E80A537BFF38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07C2CE6B-D23F-40C6-BD09-E80A537BFF38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07C2CE6B-D23F-40C6-BD09-E80A537BFF38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07C2CE6B-D23F-40C6-BD09-E80A537BFF38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E49354F-B6E7-44E3-9844-A328B738C225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E49354F-B6E7-44E3-9844-A328B738C225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E49354F-B6E7-44E3-9844-A328B738C225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E49354F-B6E7-44E3-9844-A328B738C225}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
