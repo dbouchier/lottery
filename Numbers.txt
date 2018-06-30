@@ -1,3 +1,3 @@
 Most Common:  64 69 32 61 41 PB: 20
 Least Common: 65 60 21 46 53 PB: 4
-Date Factor:  65 60 46 21 33 PB: 4
+Date Factor:  60 46 21 33 47 PB: 4

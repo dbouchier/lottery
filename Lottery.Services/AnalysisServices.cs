@@ -365,15 +365,15 @@ namespace Lottery.Services
                 TimeSpan ts = drawDate - drawing.DrawDate;
 
                 double points = 0;
-                if (ts.Days <= 4)
+                if (ts.Days <= 14)
                 {
                     points = .5;
                 }
-                else if (ts.Days <= 14)
+                else if (ts.Days <= 21)
                 {
                     points = .10;
                 }
-                else if (ts.Days <= 21)
+                else if (ts.Days <= 28)
                 {
                     points = .05;
                 }
