@@ -355,61 +355,75 @@ namespace Lottery.Services
             DataService.OutputNumbers(mostCommon, leastCommon, leastCommonDateFactor);
         }
 
-        private double CalculatePoints(DateTime drawDate, DateTime lastShownDate)
-        {
-            TimeSpan ts = drawDate - lastShownDate;
-
-            double points = 0;
-            if (ts.Days <= 4)
-            {
-                points = .5;
-            }
-            else if (ts.Days <= 14)
-            {
-                points = .10;
-            }
-            else if (ts.Days <= 21)
-            {
-                points = .05;
-            }
-            else if (ts.Days <= 45)
-            {
-                points = .01;
-            }
-            return points;
-        }
-
         private double CalculateWbPoints(int number, DateTime drawDate)
         {
             List<Drawing> drawings = _drawings.Where(d => d.DrawDate < drawDate && d.DrawDate > drawDate.AddDays(-45)).OrderBy(d => d.DrawDate).ToList();
-            double points = 0;
-            int counter = 1;
+            double totalPoints = 0;
+
             foreach (Drawing drawing in drawings)
             {
+                TimeSpan ts = drawDate - drawing.DrawDate;
+
+                double points = 0;
+                if (ts.Days <= 4)
+                {
+                    points = .5;
+                }
+                else if (ts.Days <= 14)
+                {
+                    points = .10;
+                }
+                else if (ts.Days <= 21)
+                {
+                    points = .05;
+                }
+                else if (ts.Days <= 45)
+                {
+                    points = .01;
+                }
+
                 if (drawing.WhiteBall.Contains(number))
                 {
-                    points += CalculatePoints(drawDate, drawing.DrawDate);
+                    totalPoints += points;
                 }
-                counter++;
             }
 
-            return points;
+            return totalPoints;
         }
 
         private double CalculatePbPoints(int number, DateTime drawDate)
         {
-            List<Drawing> drawings = _drawings.Where(d => d.DrawDate < drawDate && d.DrawDate > drawDate.AddDays(-45)).OrderBy(d => d.DrawDate).ToList();
-            double points = 0;
-            int counter = 1;
+            List<Drawing> drawings = _drawings.Where(d => d.DrawDate < drawDate && d.DrawDate > drawDate.AddDays(-120)).OrderBy(d => d.DrawDate).ToList();
+            double totalPoints = 0;
             foreach (Drawing drawing in drawings)
             {
+                TimeSpan ts = drawDate - drawing.DrawDate;
+
+                double points = 0;
+                if (ts.Days <= 30)
+                {
+                    points = .5;
+                }
+                else if (ts.Days <= 60)
+                {
+                    points = .10;
+                }
+                else if (ts.Days <= 90)
+                {
+                    points = .05;
+                }
+                else if (ts.Days <= 120)
+                {
+                    points = .01;
+                }
+
                 if (drawing.PowerBall == number)
                 {
-                    points += CalculatePoints(drawDate, drawing.DrawDate);
+                    totalPoints += points;
                 }
             }
 
-            return points;
+            return totalPoints;
         }
 
         private void AssignWbRand(Drawing results, int n, int max)
